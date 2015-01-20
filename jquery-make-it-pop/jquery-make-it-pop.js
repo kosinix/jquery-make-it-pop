@@ -107,3 +107,6 @@
         popcornContainer.remove();
     }
 })(jQuery);
+
+// Auto invoke
+$.fn.makeItPop();
