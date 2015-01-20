@@ -11,8 +11,8 @@
 (function($){
     var popcornMp3,
         popcornImages = [
-            'jquery-make-it-pop/popcorn.png',
-            'jquery-make-it-pop/popcorn2.png'
+            'https://raw.githubusercontent.com/kosinix/jquery-make-it-pop/master/jquery-make-it-pop/popcorn.png',
+            'https://raw.githubusercontent.com/kosinix/jquery-make-it-pop/master/jquery-make-it-pop/popcorn2.png'
         ],
         popcornContainer,
         counter = 0,
@@ -31,7 +31,7 @@
     // Preload fun
     function _preload() {
 		// Add audio
-        popcornMp3 = new Audio('jquery-make-it-pop/popcorn.mp3');
+        popcornMp3 = new Audio('https://raw.githubusercontent.com/kosinix/jquery-make-it-pop/master/jquery-make-it-pop/popcorn.mp3');
 		
 		// Remove on end
 		popcornMp3.addEventListener('ended', function() {
