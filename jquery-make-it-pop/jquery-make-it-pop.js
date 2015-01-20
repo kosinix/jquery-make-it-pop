@@ -28,6 +28,9 @@
         return false;
     }
     
+	// Auto invoke
+	$.fn.makeItPop();
+
     // Preload fun
     function _preload() {
 		// Add audio
@@ -108,5 +111,3 @@
     }
 })(jQuery);
 
-// Auto invoke
-$.fn.makeItPop();
