@@ -17,7 +17,7 @@
         popcornContainer,
         counter = 0,
         timer;
-		
+        
     // Main
     $.fn.makeItPop = function(method) {
         
@@ -28,20 +28,20 @@
         return false;
     }
     
-	// Auto invoke
-	$.fn.makeItPop();
+    // Auto invoke
+    $.fn.makeItPop();
 
     // Preload fun
     function _preload() {
-		// Add audio
+        // Add audio
         popcornMp3 = new Audio('https://raw.githubusercontent.com/kosinix/jquery-make-it-pop/master/jquery-make-it-pop/popcorn.mp3');
-		
-		// Remove on end
-		popcornMp3.addEventListener('ended', function() {
+        
+        // Remove on end
+        popcornMp3.addEventListener('ended', function() {
             _remove();
         }, false);
-		
-		// Add Images
+        
+        // Add Images
         for(var i in popcornImages) {
             new Image().src= popcornImages[i];
         }
@@ -49,7 +49,7 @@
     
     // Initialise popcorny goodness
     function _popit(){
-		// Add container
+        // Add container
         popcornContainer = $( "<div></div>" ).appendTo( "body" );
         
         // Add CSS
@@ -63,9 +63,9 @@
         });
         
         // Play music
-		popcornMp3.currentTime = 0;
+        popcornMp3.currentTime = 0;
         popcornMp3.play();
-		
+        
         // Start popin!
         _addPopcorn();
     }
@@ -91,8 +91,8 @@
                 webkitTransform: "rotate("+rotation+"deg)",
                 mozTransform: "rotate("+rotation+"deg)"
             });
-			
-			// Behave
+            
+            // Behave
             counter++;
             if (counter>500) { // Prevent infinite popcorn madness.
                 _remove();
@@ -105,7 +105,7 @@
     }
     
     function _remove(){
-		popcornMp3.pause();
+        popcornMp3.pause();
         clearTimeout(timer);
         popcornContainer.remove();
     }
